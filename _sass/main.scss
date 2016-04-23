@@ -1,7 +1,10 @@
 body {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "PT Serif", serif;
+  background-color: #f9f9f9;
+  color: #4c4c4c;
   padding: 20px;
   margin: 0;
+  line-height: 1.5;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -14,6 +17,7 @@ h3,
 h4,
 h5 {
   margin: 45px 0 25px;
+  line-height: 1.25;  
 }
 img {
   max-width: 100%;
@@ -253,8 +257,9 @@ article {
   max-width: 700px;
   margin: 0 auto;
   .title {
-    line-height: 1.4em;
     text-align: center;
+    margin: 0;
+    font-size: 1.953rem;
   }
   .divider {
     background: #ddd;
@@ -274,9 +279,19 @@ article {
     margin: 30px 0;
   }
   p {
-    font-size: 15px;
-    line-height: 1.9em;
-    word-wrap: break-word;
+    margin-bottom: 0;
+    max-width: 45rem; // keep measure at a readable length
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.5;
+    order: 4;
+    > a {
+    border-bottom: 1px solid #a9a9a9;
+    &:hover {
+      color: #000;
+      border-bottom-color: #000;
+    }
+  }
   }
   .footnote {
     border: 0;
@@ -313,12 +328,15 @@ section {
     padding: 0;
     li {
       margin: 25px 0;
-      .title {
+      h3.title {
         max-width: 100%;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         white-space: nowrap !important;
         word-wrap: normal !important;
+        margin: 0.25em 0 0;
+        font-family: "PT Serif", serif;
+        font-size: 1.25rem;
       }
       a {
         text-decoration: none;
